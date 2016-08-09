@@ -5,6 +5,19 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pa130555d-projekat", "pa130555d-projekat\pa130555d-projekat.csproj", "{3383BAEC-7515-440F-B2A5-86DCD09B722D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{EAFE59D4-CFD0-4C71-BA47-A00D471E4BF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{19CA64A7-4F16-4C71-AD7F-CBC628A27DCE}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{D97D4695-A88C-4775-9110-F00F1A02D6D7}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\pa130555d-projekat.json = PublishScripts\Templates\pa130555d-projekat.json
+		PublishScripts\Templates\pa130555d-projekat.param.dev.json = PublishScripts\Templates\pa130555d-projekat.param.dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19CA64A7-4F16-4C71-AD7F-CBC628A27DCE} = {EAFE59D4-CFD0-4C71-BA47-A00D471E4BF0}
+		{D97D4695-A88C-4775-9110-F00F1A02D6D7} = {EAFE59D4-CFD0-4C71-BA47-A00D471E4BF0}
 	EndGlobalSection
 EndGlobal

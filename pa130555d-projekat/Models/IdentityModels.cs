@@ -16,6 +16,8 @@ namespace pa130555d_projekat.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public int Tokens { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

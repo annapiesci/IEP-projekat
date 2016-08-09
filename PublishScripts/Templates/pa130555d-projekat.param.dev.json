@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "pa130555d-projekat"
+  },
+  "hostingPlanName": {
+    "value": "pa130555d-servicePlan"
+  },
+  "siteLocation": {
+    "value": "North Europe"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "71168c9e-8fed-4341-8ca4-4e224b6d7198"
+  },
+  "resourceGroup": {
+    "value": "pa130555d"
+  }
+}
