@@ -1,4 +1,7 @@
-﻿@model pa130555d_projekat.Models.IndexViewModel
+﻿@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using pa130555d_projekat.Models;
+@model pa130555d_projekat.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
 }
@@ -10,6 +13,17 @@
     <h4>Change your account settings</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>Username:</dt>
+
+        @{
+            var manager = new UserManager<ApplicationUser>
+                (new UserStore<ApplicationUser>
+                    (new ApplicationDbContext()));
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+            <dd>
+                @currentUser.UserName
+            </dd>
+        }
         <dt>Password:</dt>
         <dd>
             [
@@ -23,6 +37,12 @@
             }
             ]
         </dd>
+        <dt>Tokens:</dt>
+
+            <dd>
+                @currentUser.Tokens <br> <a href="#">buy tokens<a>
+            </dd>
+        
         <dt>External Logins:</dt>
         <dd>
             @Model.Logins.Count [
