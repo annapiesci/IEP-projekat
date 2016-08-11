@@ -284,14 +284,14 @@
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\ORDERs2\Create.cshtml" />
     <Content Include="Views\ORDERs2\Delete.cshtml" />
-    <Content Include="Views\ORDERs2\Details.cshtml" />
-    <Content Include="Views\ORDERs2\Edit.cshtml" />
     <Content Include="Views\ORDERs2\Index.cshtml" />
     <Content Include="Views\PRODUCTs2\Create.cshtml" />
     <Content Include="Views\PRODUCTs2\Delete.cshtml" />
     <Content Include="Views\PRODUCTs2\Details.cshtml" />
     <Content Include="Views\PRODUCTs2\Edit.cshtml" />
     <Content Include="Views\PRODUCTs2\Index.cshtml" />
+    <Content Include="Views\ORDERs2\Confirm.cshtml" />
+    <Content Include="Views\ORDERs2\Decline.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
