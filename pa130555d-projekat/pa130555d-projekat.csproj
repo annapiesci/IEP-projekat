@@ -295,6 +295,8 @@
     <Content Include="Views\PRODUCTs2\Activate.cshtml" />
     <Content Include="Views\PRODUCTs2\Close.cshtml" />
     <Content Include="Views\PRODUCTs2\Bid.cshtml" />
+    <Content Include="Views\PRODUCTs2\_IndexPartial.cshtml" />
+    <Content Include="Views\PRODUCTs2\MyProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
