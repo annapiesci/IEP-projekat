@@ -292,6 +292,7 @@
     <Content Include="Views\PRODUCTs2\Index.cshtml" />
     <Content Include="Views\ORDERs2\Confirm.cshtml" />
     <Content Include="Views\ORDERs2\Decline.cshtml" />
+    <Content Include="Views\PRODUCTs2\Send.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
