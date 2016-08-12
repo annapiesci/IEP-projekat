@@ -163,7 +163,7 @@ namespace pa130555d_projekat.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "PRODUCTs2");
                 }
                 AddErrors(result);
             }
@@ -392,7 +392,7 @@ namespace pa130555d_projekat.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "PRODUCTs2");
         }
 
         //
@@ -449,7 +449,7 @@ namespace pa130555d_projekat.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "PRODUCTs2");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
