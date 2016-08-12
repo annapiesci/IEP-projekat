@@ -12,16 +12,6 @@
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         
-            @{
-                var manager = new UserManager<ApplicationUser>
-                    (new UserStore<ApplicationUser>
-                        (new ApplicationDbContext()));
-                var currentUser = manager.FindById(User.Identity.GetUserId());
-                <li>
-                    <p>Tokens:</p>
-                    @currentUser.Tokens
-                </li>
-            }
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
     }

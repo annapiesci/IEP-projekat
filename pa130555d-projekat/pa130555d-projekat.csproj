@@ -287,12 +287,14 @@
     <Content Include="Views\ORDERs2\Index.cshtml" />
     <Content Include="Views\PRODUCTs2\Create.cshtml" />
     <Content Include="Views\PRODUCTs2\Delete.cshtml" />
-    <Content Include="Views\PRODUCTs2\Details.cshtml" />
     <Content Include="Views\PRODUCTs2\Edit.cshtml" />
     <Content Include="Views\PRODUCTs2\Index.cshtml" />
     <Content Include="Views\ORDERs2\Confirm.cshtml" />
     <Content Include="Views\ORDERs2\Decline.cshtml" />
     <Content Include="Views\PRODUCTs2\Send.cshtml" />
+    <Content Include="Views\PRODUCTs2\Activate.cshtml" />
+    <Content Include="Views\PRODUCTs2\Close.cshtml" />
+    <Content Include="Views\PRODUCTs2\Bid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
