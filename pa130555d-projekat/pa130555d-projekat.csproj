@@ -304,6 +304,11 @@
     <Content Include="Views\PRODUCTs2\Close.cshtml" />
     <Content Include="Views\PRODUCTs2\Bid.cshtml" />
     <Content Include="Views\PRODUCTs2\MyProducts.cshtml" />
+    <Content Include="Views\PRODUCTs2\AdminPage.cshtml" />
+    <Content Include="Views\PRODUCTs2\PendingProducts.cshtml" />
+    <Content Include="Views\PRODUCTs2\ActiveProducts.cshtml" />
+    <Content Include="Views\ORDERs2\PendingOrders.cshtml" />
+    <Content Include="Views\ORDERs2\MyOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

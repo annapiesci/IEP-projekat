@@ -40,7 +40,9 @@
         <dt>Tokens:</dt>
 
             <dd>
-                @currentUser.Tokens <br> <a href="#">buy tokens<a>
+                @currentUser.Tokens <br>
+                @Html.ActionLink("Buy tokens", "Create", "ORDERs2") |
+                @Html.ActionLink("My orders", "MyOrders", "ORDERs2")
             </dd>
         
         <dt>External Logins:</dt>
