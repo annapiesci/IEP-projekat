@@ -309,6 +309,7 @@
     <Content Include="Views\PRODUCTs2\ActiveProducts.cshtml" />
     <Content Include="Views\ORDERs2\PendingOrders.cshtml" />
     <Content Include="Views\ORDERs2\MyOrders.cshtml" />
+    <Content Include="Views\Account\ListAllUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

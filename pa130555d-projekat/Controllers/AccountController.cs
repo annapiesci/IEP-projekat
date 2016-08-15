@@ -142,6 +142,19 @@ namespace pa130555d_projekat.Controllers
             return View();
         }
 
+        public ActionResult ListAllUsers()
+        {
+
+
+            var context = new ApplicationDbContext();
+
+            var allUsers = context.Users.ToList();
+            var r = allUsers.OrderBy(w => w.UserName);
+
+
+            return View(r);
+        }
+
         //
         // POST: /Account/Register
         [HttpPost]
