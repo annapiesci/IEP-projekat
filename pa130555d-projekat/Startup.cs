@@ -8,7 +8,7 @@ namespace pa130555d_projekat
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            app.MapSignalR();
         }
     }
 }
