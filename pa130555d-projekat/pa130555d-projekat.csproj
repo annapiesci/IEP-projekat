@@ -208,6 +208,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BIDsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ORDERs2Controller.cs" />
@@ -222,8 +223,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BID.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model12.cs" />
     <Compile Include="Models\Model2.cs" />
     <Compile Include="Models\ORDER.cs" />
     <Compile Include="Models\PRODUCT.cs" />
@@ -316,6 +319,11 @@
     <Content Include="Views\Account\ListAllUsers.cshtml" />
     <Content Include="Views\PRODUCTs2\ProductPartial.cshtml" />
     <Content Include="Views\PRODUCTs2\Details.cshtml" />
+    <Content Include="Views\BIDs\Create.cshtml" />
+    <Content Include="Views\BIDs\Delete.cshtml" />
+    <Content Include="Views\BIDs\Details.cshtml" />
+    <Content Include="Views\BIDs\Edit.cshtml" />
+    <Content Include="Views\BIDs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
