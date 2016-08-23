@@ -30,7 +30,7 @@
                     @if (Request.IsAuthenticated) {
                         <li>@Html.ActionLink("My products", "MyProducts", "PRODUCTs2")</li>
 
-                        <li>@Html.ActionLink("Sold products", "SolsProducts", "PRODUCTs2")</li>
+                        <li>@Html.ActionLink("Sold products", "SoldProducts", "PRODUCTs2")</li>
                         var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
                         var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
                         if (manager.IsInRole(User.Identity.GetUserId(), "Admin"))
