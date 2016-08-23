@@ -49,8 +49,9 @@ namespace pa130555d_projekat.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
