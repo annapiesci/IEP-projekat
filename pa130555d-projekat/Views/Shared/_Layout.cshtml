@@ -29,23 +29,20 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     @if (Request.IsAuthenticated)
                     {
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropdown">
-                                    <p class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">@Html.Label("Product options")</p>
+                        
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Product options <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="text-center">@Html.ActionLink("My products", "MyProducts", "PRODUCTs2")</a></li>
                                         <li><a href="#" class="text-center">@Html.ActionLink("Sold products", "SoldProducts", "PRODUCTs2")</a></li>
                                     </ul>
-                                </div>
-                        </li>
+                                </li>
                         <li>@Html.ActionLink("New product", "Create", "PRODUCTs2")</li>
                         var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
                         var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
                         if (manager.IsInRole(User.Identity.GetUserId(), "Admin"))
                         {
-                            <li>
-                                <div class="dropdown"><p class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">@Html.Label("Admin options")</p>
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Admin options <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="text-center">@Html.ActionLink("Registered users", "ListAllUsers", "Account")</a></li>
                                         <li><a href="#" class="text-center">@Html.ActionLink("Pending products", "PendingProducts", "PRODUCTs2")</a></li>
@@ -53,8 +50,7 @@
                                         <li><a href="#" class="text-center">@Html.ActionLink("Pending orders", "PendingOrders", "ORDERs2")</a></li>
                                         
                                     </ul>
-                                </div>
-                            </li>
+                                </li>
                         }
                     }
                 </ul>
