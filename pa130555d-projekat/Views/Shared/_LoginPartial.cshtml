@@ -12,13 +12,31 @@
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         
+        <li>
+            <div class="dropdown">
+                <img src="https://s25.postimg.org/myewu9lsf/coins.gif" width="28" height="28" style="margin-top:10px;" data-toggle="dropdown" />
+                <ul class="dropdown-menu">
+                    @{
+
+                        var store = new UserStore<ApplicationUser>(new ApplicationDbContext());
+                        var manager = new UserManager<ApplicationUser>(store);
+                        var currentUser = manager.FindById(User.Identity.GetUserId());
+                    }
+                    <li class="list-group-item-heading text-center"><p class="text-center">Tokens: @currentUser.Tokens</p></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="text-center"><b>@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</b></a></li>
+                    <li><a href="#" class="text-center">@Html.ActionLink("View orders", "MyOrders", "ORDERs2")</a></li>
+                </ul>
+            </div>
+        </li>
+
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
-    }
+                            }
 
-}
-else
-{
+                        }
+                        else
+                        {
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
