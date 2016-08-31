@@ -229,6 +229,10 @@
     <Compile Include="Migrations\201608091751303_Tokens.Designer.cs">
       <DependentUpon>201608091751303_Tokens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608310905377_duration.cs" />
+    <Compile Include="Migrations\201608310905377_duration.Designer.cs">
+      <DependentUpon>201608310905377_duration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BID.cs" />
@@ -352,6 +356,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608091751303_Tokens.resx">
       <DependentUpon>201608091751303_Tokens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608310905377_duration.resx">
+      <DependentUpon>201608310905377_duration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
