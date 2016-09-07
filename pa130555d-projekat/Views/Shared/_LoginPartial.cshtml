@@ -1,6 +1,11 @@
 ﻿@using Microsoft.AspNet.Identity;
 @using Microsoft.AspNet.Identity.EntityFramework;
 @using pa130555d_projekat.Models;
+
+@section Scripts{
+<script type="text/javascript" src="http://stage.centili.com/widget/js/c-mobile-payment-scripts.js"></script>
+    }
+
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
@@ -24,6 +29,7 @@
                     }
                     <li class="list-group-item-heading text-center"><p class="text-center">Tokens: @currentUser.Tokens</p></li>
                     <li class="divider"></li>
+                    <li><a id="c-mobile-payment-widget" href="http://stage.centili.com/widget/WidgetModule?api=89e44137af0c430043219ffa45278938"><img src="https://www.centili.com/images/centili-widget-button.png" /></a></li>
                     <li><a href="#" class="text-center"><b>@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</b></a></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("View orders", "MyOrders", "ORDERs2")</a></li>
                 </ul>
