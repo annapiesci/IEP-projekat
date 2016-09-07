@@ -224,7 +224,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Hubs\TimeHub.cs" />
+    <Compile Include="Hubs\RealTimeData.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.Designer.cs">
       <DependentUpon>201608091751303_Tokens.cs</DependentUpon>
