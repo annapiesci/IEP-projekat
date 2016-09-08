@@ -11,6 +11,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +26,6 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "PRODUCTs2")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     @if (Request.IsAuthenticated)
                     {
@@ -47,7 +47,6 @@
                                         <li><a href="#" class="text-center">@Html.ActionLink("Registered users", "ListAllUsers", "Account")</a></li>
                                         <li><a href="#" class="text-center">@Html.ActionLink("Pending products", "PendingProducts", "PRODUCTs2")</a></li>
                                         <li><a href="#" class="text-center">@Html.ActionLink("Active products", "ActiveProducts", "PRODUCTs2")</a></li>
-                                        <li><a href="#" class="text-center">@Html.ActionLink("Pending orders", "PendingOrders", "ORDERs2")</a></li>
                                         
                                     </ul>
                                 </li>
