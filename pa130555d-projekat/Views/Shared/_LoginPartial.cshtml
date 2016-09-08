@@ -29,8 +29,8 @@
                     }
                     <li class="list-group-item-heading text-center"><p class="text-center">Tokens: @currentUser.Tokens</p></li>
                     <li class="divider"></li>
-                    <li><a id="c-mobile-payment-widget" href="http://stage.centili.com/widget/WidgetModule?api=89e44137af0c430043219ffa45278938"><img src="https://www.centili.com/images/centili-widget-button.png" /></a></li>
-                    <li><a href="#" class="text-center"><b>@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</b></a></li>
+                    <li><a id="c-mobile-payment-widget" href="http://stage.centili.com/widget/WidgetModule?api=89e44137af0c430043219ffa45278938&clientId=@User.Identity.GetUserId()&package=0&packagelock=true"><img src="https://www.centili.com/images/centili-widget-button.png" /></a></li>
+                    <li><a href="#" class="text-center">@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</a></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("View orders", "MyOrders", "ORDERs2")</a></li>
                 </ul>
             </div>

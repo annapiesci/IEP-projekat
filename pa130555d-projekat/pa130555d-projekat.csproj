@@ -338,6 +338,7 @@
     <Content Include="Views\BIDs\Edit.cshtml" />
     <Content Include="Views\BIDs\Index.cshtml" />
     <Content Include="Views\BIDs\HistoryPartial.cshtml" />
+    <Content Include="Views\ORDERs2\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
