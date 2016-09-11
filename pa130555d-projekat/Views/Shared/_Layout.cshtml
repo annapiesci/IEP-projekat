@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Online Auctions", "Index", "PRODUCTs2", new { area = "" }, new { @class = "navbar-brand" })
+                <a href='~/PRODUCTs2/Index' target='_blank'><img src='https://s16.postimg.org/beatuwsg5/imageedit_1_4440635327.png' width="197.6" height="46.4" border='0' alt='postimage' /></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -55,10 +55,17 @@
                     {
                         
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Product options <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">My products <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="text-center">@Html.ActionLink("My products", "MyProducts", "PRODUCTs2")</a></li>
-                                        <li><a href="#" class="text-center">@Html.ActionLink("Sold products", "SoldProducts", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Drafts", "Drafts", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Published", "Published", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Active", "Active", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Closed", "Closed", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Expired", "Expired", "PRODUCTs2")</a></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Sold", "Prodato", "PRODUCTs2")</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#" class="text-center">@Html.ActionLink("Purchased", "Won", "PRODUCTs2")</a></li>
+
                                     </ul>
                                 </li>
                         <li>@Html.ActionLink("New product", "Create", "PRODUCTs2")</li>

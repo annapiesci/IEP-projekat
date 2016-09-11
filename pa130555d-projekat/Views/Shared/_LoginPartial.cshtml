@@ -28,6 +28,7 @@
                         var currentUser = manager.FindById(User.Identity.GetUserId());
                     }
                     <li class="list-group-item-heading text-center"><p class="text-center"><b>Tokens: @currentUser.Tokens</b></p></li>
+                    <li class="divider"></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</a></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("View orders", "MyOrders", "ORDERs2")</a></li>
                 </ul>

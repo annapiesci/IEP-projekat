@@ -90,6 +90,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -228,6 +232,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GMailer.cs" />
     <Compile Include="Hubs\RealTimeData.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.Designer.cs">
@@ -251,7 +256,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -343,6 +347,14 @@
     <Content Include="Views\BIDs\Index.cshtml" />
     <Content Include="Views\BIDs\HistoryPartial.cshtml" />
     <Content Include="Views\ORDERs2\Result.cshtml" />
+    <Content Include="Views\PRODUCTs2\Active.cshtml" />
+    <Content Include="Views\PRODUCTs2\Expired.cshtml" />
+    <Content Include="Views\PRODUCTs2\Closed.cshtml" />
+    <Content Include="Views\PRODUCTs2\Won.cshtml" />
+    <Content Include="Views\PRODUCTs2\Drafts.cshtml" />
+    <Content Include="Views\PRODUCTs2\Published.cshtml" />
+    <Content Include="Views\PRODUCTs2\Sold.cshtml" />
+    <Content Include="Views\PRODUCTs2\Prodato.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
