@@ -4,6 +4,23 @@
 
 @section Scripts{
 <script type="text/javascript" src="http://stage.centili.com/widget/js/c-mobile-payment-scripts.js"></script>
+
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/SignalR/hubs"></script>
+    <script>
+
+
+    $(document).ready(function () {
+
+                var tml = $.connection.realTimeData;
+                tml.client.updateTokens = function (t) {
+                    $("#tokens").text(t);
+                }
+                $.connection.hub.start().done(function () {
+                });
+            });
+    </script>
+
     }
 
 @if (Request.IsAuthenticated)
@@ -27,7 +44,7 @@
                         var manager = new UserManager<ApplicationUser>(store);
                         var currentUser = manager.FindById(User.Identity.GetUserId());
                     }
-                    <li class="list-group-item-heading text-center"><p class="text-center"><b>Tokens: @currentUser.Tokens</b></p></li>
+                    <li class="list-group-item-heading text-center"><p class="text-center"><b>Tokens: <span id="tokens">@currentUser.Tokens</span></b></p></li>
                     <li class="divider"></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("BUY TOKENS", "Create", "ORDERs2")</a></li>
                     <li><a href="#" class="text-center">@Html.ActionLink("View orders", "MyOrders", "ORDERs2")</a></li>
