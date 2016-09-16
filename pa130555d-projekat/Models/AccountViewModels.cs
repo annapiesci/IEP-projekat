@@ -6,6 +6,9 @@ namespace pa130555d_projekat.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
+        public string Username { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

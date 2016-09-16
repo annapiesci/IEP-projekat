@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using pa130555d_projekat.Models;
+using Microsoft.Owin.Security.Facebook;
 
 namespace pa130555d_projekat
 {
@@ -54,9 +55,17 @@ namespace pa130555d_projekat
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "169907660084925",
+               appSecret: "81114b360d2db9a068104808dc75526f");
+
+            //var facebookAuthenticationOptions = new FacebookAuthenticationOptions()
+            //{
+            //    AppId = "169907660084925",
+            //    AppSecret = "81114b360d2db9a068104808dc75526f"
+            //};
+            //facebookAuthenticationOptions.Scope.Add("email");
+            //app.UseFacebookAuthentication(facebookAuthenticationOptions);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

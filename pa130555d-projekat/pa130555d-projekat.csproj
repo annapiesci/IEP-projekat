@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FluentScheduler, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b76503528a14ebd1, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentScheduler.5.0.0\lib\net40\FluentScheduler.dll</HintPath>
       <Private>True</Private>
@@ -232,7 +236,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="GMailer.cs" />
     <Compile Include="Hubs\RealTimeData.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.cs" />
     <Compile Include="Migrations\201608091751303_Tokens.Designer.cs">
@@ -322,23 +325,14 @@
     <Content Include="Views\ORDERs2\Delete.cshtml" />
     <Content Include="Views\ORDERs2\Index.cshtml" />
     <Content Include="Views\PRODUCTs2\Create.cshtml" />
-    <Content Include="Views\PRODUCTs2\Delete.cshtml" />
     <Content Include="Views\PRODUCTs2\Edit.cshtml" />
     <Content Include="Views\PRODUCTs2\Index.cshtml" />
-    <Content Include="Views\ORDERs2\Confirm.cshtml" />
-    <Content Include="Views\ORDERs2\Decline.cshtml" />
-    <Content Include="Views\PRODUCTs2\Send.cshtml" />
-    <Content Include="Views\PRODUCTs2\Activate.cshtml" />
-    <Content Include="Views\PRODUCTs2\Close.cshtml" />
-    <Content Include="Views\PRODUCTs2\Bid.cshtml" />
     <Content Include="Views\PRODUCTs2\MyProducts.cshtml" />
-    <Content Include="Views\PRODUCTs2\AdminPage.cshtml" />
     <Content Include="Views\PRODUCTs2\PendingProducts.cshtml" />
     <Content Include="Views\PRODUCTs2\ActiveProducts.cshtml" />
     <Content Include="Views\ORDERs2\PendingOrders.cshtml" />
     <Content Include="Views\ORDERs2\MyOrders.cshtml" />
     <Content Include="Views\Account\ListAllUsers.cshtml" />
-    <Content Include="Views\PRODUCTs2\ProductPartial.cshtml" />
     <Content Include="Views\PRODUCTs2\Details.cshtml" />
     <Content Include="Views\BIDs\Create.cshtml" />
     <Content Include="Views\BIDs\Delete.cshtml" />
@@ -346,7 +340,6 @@
     <Content Include="Views\BIDs\Edit.cshtml" />
     <Content Include="Views\BIDs\Index.cshtml" />
     <Content Include="Views\BIDs\HistoryPartial.cshtml" />
-    <Content Include="Views\ORDERs2\Result.cshtml" />
     <Content Include="Views\PRODUCTs2\Active.cshtml" />
     <Content Include="Views\PRODUCTs2\Expired.cshtml" />
     <Content Include="Views\PRODUCTs2\Closed.cshtml" />
