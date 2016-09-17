@@ -75,10 +75,22 @@ namespace pa130555d_projekat.Controllers
                 return View(model);
             }
 
+            // Require the user to have a confirmed email before they can log on.
+            //var user = await UserManager.FindByNameAsync(model.Email);
+            var user = SignInManager.UserManager.Users.Where(u => u.Email == model.Email).FirstOrDefault();
+            if (user != null)
+            {
+                if (!await UserManager.IsEmailConfirmedAsync(user.Id))
+                {
+                    ViewBag.errorMessage = "You must have a confirmed email to log on.";
+                    return View("Error");
+                }
+            }
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             //var result = await SignInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, shouldLockout: false);
-            var user = SignInManager.UserManager.Users.Where(u => u.Email == model.Email).FirstOrDefault();
+            //var user = SignInManager.UserManager.Users.Where(u => u.Email == model.Email).FirstOrDefault();
             var result = await SignInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -172,7 +184,7 @@ namespace pa130555d_projekat.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     //For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     //Send an email with this link
@@ -193,8 +205,14 @@ namespace pa130555d_projekat.Controllers
                             smtp.Send(mail);
                         }
                     }
+                    // Uncomment to debug locally 
+                    // TempData["ViewBagLink"] = callbackUrl;
 
-                    return RedirectToAction("Index", "PRODUCTs2");
+                    ViewBag.Message = "Check your email and confirm your account, you must be confirmed "
+                                    + "before you can log in.";
+
+                    return View("Info");
+                    //return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
