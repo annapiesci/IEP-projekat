@@ -8,7 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System.Net.Mail;
 using pa130555d_projekat.Models;
+using System.Net;
 
 namespace pa130555d_projekat.Controllers
 {
@@ -171,12 +173,26 @@ namespace pa130555d_projekat.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                    //For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                    //Send an email with this link
+                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    using (MailMessage mail = new MailMessage())
+                    {
+                        mail.From = new MailAddress("pa130555d.iep@yahoo.com");
+                        mail.To.Add(user.Email.ToString());
+                        mail.Subject = "Confirm your account";
+                        mail.Body = "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>";
+                        mail.IsBodyHtml = true;
+                        using (SmtpClient smtp = new SmtpClient("smtp.mail.yahoo.com", 587))
+                        {
+                            smtp.Credentials = new NetworkCredential("pa130555d.iep@yahoo.com", "pass1234");
+                            smtp.EnableSsl = true;
+                            smtp.Send(mail);
+                        }
+                    }
 
                     return RedirectToAction("Index", "PRODUCTs2");
                 }
