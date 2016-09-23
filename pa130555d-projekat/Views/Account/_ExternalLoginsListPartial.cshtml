@@ -20,7 +20,8 @@
                 <p>
                     @foreach (AuthenticationDescription p in loginProviders)
                     {
-                        <button type="submit" class="btn btn-default"  id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">@p.AuthenticationType</button>
+                        @*<input type="image" src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/256/social_facebook_box_blue.png" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account" alt="Submit" />*@
+                        <button type="submit" class="btn btn-default"  id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account"></button>
                     }
                 </p>
             </div>
